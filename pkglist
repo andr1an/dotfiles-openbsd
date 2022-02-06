@@ -19,12 +19,14 @@ mutt--
 nmap--
 openvpn--
 portslist--
+pstree--
 quirks--
 rofi--
 rsync--
 rxvt-unicode--
 screenfetch--
 scrot--
+smartmontools--
 subversion--
 tree--
 unzip--

@@ -5,7 +5,7 @@ bash:
 	cp -fv .bashrc $${HOME}/.bashrc
 
 ssh:
-	install -d -m 0700 $${HOME}/.ssh
+	install -d -m 0700 $${HOME}/.ssh{,/config.d}
 	cp -fv .ssh/config $${HOME}/.ssh/config
 
 vim:

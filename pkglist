@@ -5,6 +5,7 @@ colordiff--
 colorls--
 cowsay--
 curl--
+dfc--
 feh--
 firefox--
 git--
@@ -20,6 +21,7 @@ nmap--
 openvpn--
 portslist--
 pstree--
+python--%3.9
 quirks--
 rofi--
 rsync--

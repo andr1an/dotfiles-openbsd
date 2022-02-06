@@ -15,8 +15,13 @@ alias diff='colordiff'
 alias ll='ls -l'
 alias la='ls -lA'
 
+# Source bash completions
 for _file in /etc/profile.d/*.sh; do
   . "$_file"
 done
 
 complete -cf doas
+
+# OpenBSD source aliases
+alias reposync='doas -u cvs reposync rsync://anoncvs.fr.openbsd.org/openbsd-cvs/ /home/cvs'
+alias cvsup='cvs -d /home/cvs -q up -Pd -rOPENBSD_7_0'

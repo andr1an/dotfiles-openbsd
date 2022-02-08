@@ -12,6 +12,7 @@ git--
 gnupg--
 htop--
 i3--
+i3lock--
 i3status--
 iridium--
 mc--
@@ -23,6 +24,7 @@ portslist--
 pstree--
 python--%3.9
 quirks--
+reposync--
 rofi--
 rsync--
 rxvt-unicode--
@@ -34,3 +36,4 @@ tree--
 unzip--
 vim--gtk3-lua
 w3m--image
+xautolock--

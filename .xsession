@@ -7,9 +7,9 @@ export LC_ALL=en_US.UTF-8
 
 [[ -f $HOME/.Xresources ]] && xrdb -merge $HOME/.Xresources
 
-if [[ -z "$SSH_AUTH_SOCK" ]]; then
-  eval $(ssh-agent)
-fi
+# SSH agent
+export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
+[[ -S "$SSH_AUTH_SOCK" ]] || eval "$(ssh-agent -a "$SSH_AUTH_SOCK")"
 
 urxvtd -q -f -o
 

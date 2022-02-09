@@ -5,6 +5,9 @@ export TERMINAL=urxvtc
 # Setting locale for X.Org
 export LC_ALL=en_US.UTF-8
 
+# Cursors
+export XCURSOR_PATH="${XCURSOR_PATH}:${HOME}/.local/share/icons"
+
 [[ -f $HOME/.Xresources ]] && xrdb -merge $HOME/.Xresources
 
 # SSH agent

@@ -9,6 +9,9 @@ Xft.hintstyle:  hintslight
 Xft.lcdfilter:  lcddefault
 Xft.autohint:   false
 
+! Cursor theme
+Xcursor.theme: Nordic-cursors
+
 ! Color settings (Solarized dark)
 
 *background: #002b36

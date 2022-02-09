@@ -1,4 +1,4 @@
-all: bash ssh vim xsession i3 mc mutt
+all: bash ssh vim x11 i3 mc mutt git
 
 bash:
 	cp -fv .bash_profile $${HOME}/.bash_profile
@@ -11,9 +11,11 @@ ssh:
 vim:
 	cp -fv .vimrc $${HOME}/.vimrc
 
-xsession:
+x11:
+	mkdir -p $${HOME}/.local/share
 	cp -fv .xsession $${HOME}/.xsession
 	cp -fv .Xresources $${HOME}/.Xresources
+	cp -rfv .local/share/icons/ $${HOME}/.local/share/icons
 
 i3:
 	mkdir -p $${HOME}/.config/i3

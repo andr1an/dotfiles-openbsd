@@ -6,9 +6,9 @@ set $mod Mod4
 font pango:DejaVu Sans Mono 8
 
 # Background
-exec_always feh --bg-scale ~/Pictures/wallpapers/openbsd_blowfish.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/openbsd_blowfish.jpg
 
-exec xautolock -time 1 -locker "i3lock -c 111111"
+exec --no-startup-id xautolock -time 1 -locker "i3lock -c 111111"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

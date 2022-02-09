@@ -12,10 +12,10 @@ vim:
 	cp -fv .vimrc $${HOME}/.vimrc
 
 x11:
-	mkdir -p $${HOME}/.local/share
 	cp -fv .xsession $${HOME}/.xsession
 	cp -fv .Xresources $${HOME}/.Xresources
-	cp -rfv .local/share/icons/ $${HOME}/.local/share/icons
+	mkdir -p $${HOME}/.local/share/icons
+	cp -rfv modules/Nordic/kde/cursors/Nordic-cursors/ $${HOME}/.local/share/icons/Nordic-cursors
 
 i3:
 	mkdir -p $${HOME}/.config/i3

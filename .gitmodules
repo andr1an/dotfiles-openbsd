@@ -1,0 +1,3 @@
+[submodule "modules/Nordic"]
+	path = modules/Nordic
+	url = git@github.com:EliverLara/Nordic.git

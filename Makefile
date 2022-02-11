@@ -1,4 +1,4 @@
-all: bash ssh vim x11 i3 mc mutt git
+all: bash ssh vim x11 i3 xdg gtk mc mutt git
 
 bash:
 	cp -fv .bash_profile $${HOME}/.bash_profile
@@ -23,6 +23,15 @@ i3:
 	cp -fv .i3status.conf $${HOME}/.i3status.conf
 	mkdir -p $${HOME}/.config/rofi
 	cp -fv .config/rofi/* $${HOME}/.config/rofi
+
+xdg:
+	mkdir -p $${HOME}/{Documents,Downloads,Pictures/Screenshots}
+	cp -rv wallpapers $${HOME}/Pictures/
+
+gtk:
+	mkdir -p $${HOME}/.config
+	cp -rfv .config/gtk-3.0 $${HOME}/.config/
+	cp -fv .gtkrc-2.0 $${HOME}/
 
 mc:
 	mkdir -p $${HOME}/.config/mc

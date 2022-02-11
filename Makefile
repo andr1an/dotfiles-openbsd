@@ -26,7 +26,9 @@ i3:
 
 xdg:
 	mkdir -p $${HOME}/{Documents,Downloads,Pictures/Screenshots}
+	mkdir -p $${HOME}/.config
 	cp -rv wallpapers $${HOME}/Pictures/
+	cp -fv .config/mimeapps.list $${HOME}/.config/
 
 gtk:
 	mkdir -p $${HOME}/.config

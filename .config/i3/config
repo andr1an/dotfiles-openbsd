@@ -126,6 +126,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # lock screen
 bindsym $mod+Control+q exec "i3lock -c 111111"
 
+# power menu
+bindsym $mod+p exec "/home/caius/.config/rofi/power_menu.sh"
+
 # screenshots
 bindsym Print exec "scrot '%Y-%m-%d_%H-%M-%S_$wx$h.png' -q 90 -e 'mv $f ~/Pictures/Screenshots/'"
 

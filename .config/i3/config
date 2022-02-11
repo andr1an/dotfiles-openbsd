@@ -5,9 +5,9 @@ set $mod Mod4
 # Font for window titles
 font pango:DejaVu Sans Mono 8
 
-# Background
+# Autostart applications
+exec_always --no-startup-id ~/bin/i3exit.py
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/openbsd_blowfish.jpg
-
 exec --no-startup-id xautolock -time 5 -locker "i3lock -c 222222"
 
 # Use Mouse+$mod to drag floating windows to their wanted position

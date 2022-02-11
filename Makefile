@@ -23,6 +23,7 @@ i3:
 	cp -fv .i3status.conf $${HOME}/.i3status.conf
 	mkdir -p $${HOME}/.config/rofi
 	cp -fv .config/rofi/* $${HOME}/.config/rofi
+	cp -rfv bin/* $${HOME}/bin/
 
 xdg:
 	mkdir -p $${HOME}/{Documents,Downloads,Pictures/Screenshots}
@@ -31,8 +32,8 @@ xdg:
 	cp -fv .config/mimeapps.list $${HOME}/.config/
 
 gtk:
-	mkdir -p $${HOME}/.config
-	cp -rfv .config/gtk-3.0 $${HOME}/.config/
+	mkdir -p $${HOME}/.config/gtk-3.0
+	cp -rfv .config/gtk-3.0/* $${HOME}/.config/gtk-3.0/
 	cp -fv .gtkrc-2.0 $${HOME}/
 
 mc:

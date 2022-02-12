@@ -8,6 +8,7 @@ source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
 set certificate_file = "~/.mutt/certificates"
 set header_cache     = "~/.mutt/cache/headers"
 set message_cachedir = "~/.mutt/cache/bodies"
+set editor           = "vim"
 
 # HTML
 set mailcap_path = "~/.mutt/mailcap"

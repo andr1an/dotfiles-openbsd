@@ -10,6 +10,8 @@ ssh:
 
 vim:
 	cp -fv .vimrc $${HOME}/.vimrc
+	mkdir -p $${HOME}/.vim/colors
+	cp -fv modules/vim-colors-solarized/colors/* $${HOME}/.vim/colors
 
 x11:
 	cp -fv .xsession $${HOME}/.xsession
@@ -47,6 +49,7 @@ mutt:
 	touch $${HOME}/.mutt/certificates
 	cp -fv .mutt/*muttrc $${HOME}/.mutt/
 	cp -fv .mutt/mailcap $${HOME}/.mutt/mailcap
+	cp -fv modules/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc $${HOME}/.mutt/
 
 git:
 	cp -fv .gitconfig $${HOME}/.gitconfig

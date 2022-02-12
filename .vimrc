@@ -13,6 +13,8 @@ set modelines=3
 
 set backspace=indent,eol,start
 
+colorscheme delek
+
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 au BufRead,BufNewFile ~/.ssh/config.d/* set ft=sshconfig

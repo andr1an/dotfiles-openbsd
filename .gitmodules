@@ -1,3 +1,9 @@
 [submodule "modules/Nordic"]
 	path = modules/Nordic
 	url = git@github.com:EliverLara/Nordic.git
+[submodule "modules/vim-colors-solarized"]
+	path = modules/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "modules/mutt-colors-solarized"]
+	path = modules/mutt-colors-solarized
+	url = git@github.com:altercation/mutt-colors-solarized.git

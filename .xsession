@@ -12,10 +12,13 @@ export XCURSOR_PATH="${XCURSOR_PATH}:${HOME}/.local/share/icons"
 [[ -f $HOME/.Xresources ]] && xrdb -merge $HOME/.Xresources
 
 # SSH agent
-export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
-[[ -S "$SSH_AUTH_SOCK" ]] || eval "$(ssh-agent -a "$SSH_AUTH_SOCK")"
-if [[ ! -S "$SSH_AUTH_SOCK" ]] && [[ -z "$SSH_CONNECTION" ]]; then
-  eval "$(ssh-agent -a "$SSH_AUTH_SOCK")"
+if [[ ! -S "${HOME}/.ssh/agent.sock" ]]; then
+  if [[ -z "${SSH_AUTH_SOCK:-}" ]]; then
+    export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
+    eval "$(ssh-agent -a "$SSH_AUTH_SOCK")"
+  fi
+elif [[ -z "${SSH_AUTH_SOCK:-}" ]]; then
+  export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
 fi
 
 urxvtd -q -f -o

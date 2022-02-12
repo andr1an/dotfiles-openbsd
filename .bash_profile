@@ -8,14 +8,8 @@ export PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bi
 #fi
 
 # SSH agent
-if [[ ! -S "${HOME}/.ssh/agent.sock" ]]; then
-  if [[ -z "${SSH_AUTH_SOCK:-}" ]]; then
-    export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
-    eval "$(ssh-agent -a "$SSH_AUTH_SOCK")"
-  fi
-elif [[ -z "${SSH_AUTH_SOCK:-}" ]]; then
-  export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
-fi
+[[ -z "$SSH_AUTH_SOCK" ]] && export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
+[[ -S "$SSH_AUTH_SOCK" ]] || eval "$(ssh-agent -a "$SSH_AUTH_SOCK")"
 
 if [[ -f $HOME/.bashrc ]]; then
   . $HOME/.bashrc

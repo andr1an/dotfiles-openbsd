@@ -29,9 +29,11 @@ i3:
 
 xdg:
 	mkdir -p $${HOME}/{Documents,Downloads,Pictures/Screenshots}
-	mkdir -p $${HOME}/.config
+	mkdir -p $${HOME}/.{config,local/share/applications,icons}
 	cp -rv wallpapers $${HOME}/Pictures/
 	cp -fv .config/mimeapps.list $${HOME}/.config/
+	cp -fv .local/share/applications/* $${HOME}/.local/share/applications/
+	cp -fv .icons/* $${HOME}/.icons/
 
 gtk:
 	mkdir -p $${HOME}/.config/gtk-3.0

@@ -3,7 +3,7 @@
 set $mod Mod4
 
 # Font for window titles
-font pango:DejaVu Sans Mono 8
+font pango:Open Sans Condensed 8
 
 # Autostart applications
 exec_always --no-startup-id ~/bin/i3exit.py

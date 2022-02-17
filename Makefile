@@ -1,4 +1,4 @@
-all: bash ssh vim x11 i3 xdg gtk mc mutt git
+all: bash ssh vim x11 i3 xdg gtk mc ranger mutt git
 
 bash:
 	cp -fv .bash_profile $${HOME}/.bash_profile
@@ -45,6 +45,10 @@ mc:
 	cp -fv .config/mc/* $${HOME}/.config/mc/
 	mkdir -p $${HOME}/.local/share/mc/skins
 	cp -fv .local/share/mc/skins/* $${HOME}/.local/share/mc/skins/
+
+ranger:
+	mkdir -p $${HOME}/.config/ranger
+	cp -fv .config/ranger/* $${HOME}/.config/ranger/
 
 mutt:
 	mkdir -p $${HOME}/.mutt/cache/{bodies,headers}

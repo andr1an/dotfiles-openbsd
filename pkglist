@@ -10,6 +10,7 @@ feh--
 firefox--
 git--
 gnupg--
+go--
 htop--
 i3--
 i3lock--
@@ -26,9 +27,11 @@ portslist--
 pstree--
 python--%3.9
 quirks--
+ranger--
 reposync--
 rofi--
 rsync--
+ruby--%3.0
 rxvt-unicode--
 scrot--
 smartmontools--

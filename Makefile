@@ -1,4 +1,4 @@
-all: bash ssh vim x11 i3 xdg gtk mc ranger mutt git
+all: bash ssh vim tmux x11 i3 xdg gtk mc ranger mutt git
 
 bash:
 	cp -fv .bash_profile $${HOME}/.bash_profile
@@ -12,6 +12,9 @@ vim:
 	cp -fv .vimrc $${HOME}/.vimrc
 	mkdir -p $${HOME}/.vim/colors
 	cp -fv modules/vim-colors-solarized/colors/* $${HOME}/.vim/colors
+
+tmux:
+	cp -fv .tmux.conf $${HOME}/.tmux.conf
 
 x11:
 	cp -fv .xsession $${HOME}/.xsession

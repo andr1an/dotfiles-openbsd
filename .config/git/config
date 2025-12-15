@@ -1,0 +1,21 @@
+# ~/.gitconfig
+
+[user]
+	name = Sergey Andrianov
+	email = info@andrian.ninja
+[credential]
+	helper = cache --timeout=300
+[push]
+	default = simple
+[pull]
+	rebase = true
+[color]
+	ui = true
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	hist = log --prety-format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p

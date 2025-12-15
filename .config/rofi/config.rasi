@@ -1,0 +1,78 @@
+* {
+  font: "Fantasque Sans Mono Bold 22";
+  bg0: #2B3339;
+  bg1: #323D43;
+  fg0: #D3C6AA;
+  accent-color: @bg1;
+  urgent-color: #DBBC7F;
+  background-color: transparent;
+  text-color: @fg0;
+}
+window {
+  background-color: @bg0;
+  border-color: @fg0;
+}
+inputbar {
+  background-color: @bg1;
+  padding: 0.5em;
+}
+prompt {
+  text-color: @accent-color;
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: #A7C080;
+}
+textbox {
+  background-color: @bg1;
+}
+entry {
+  text-color: @fg0;
+}
+listview {
+  lines: 8;
+  columns: 1;
+  fixed-height: false;
+  border-color: @fg0;
+}
+scrollbar {
+  handle-color: @bg1;
+}
+element {
+  padding: 0.5em;
+  spacing: 0.5em;
+}
+element normal normal {
+  text-color: @fg0;
+  background-color: @bg0;
+}
+element alternate normal {
+  background-color: @bg0;
+  text-color: @fg0;
+}
+element normal urgent {
+  text-color: @urgent-color;
+}
+element normal active {
+  text-color: @accent-color;
+}
+element alternate active {
+  text-color: @accent-color;
+}
+element selected {
+  text-color: @bg0;
+}
+element selected normal, element selected active {
+  background-color: @accent-color;
+}
+element selected urgent {
+  background-color: @urgent-color;
+}
+element-icon {
+  size: 0.8em;
+}
+element-text {
+  text-color: inherit;
+}

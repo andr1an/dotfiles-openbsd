@@ -2,13 +2,17 @@
 
 fontname "sans-serif:pixelsize=22:bold"
 
-command terminal urxvtc
-command launcher "rofi -show drun"
+command terminal    "urxvtc"
+command launcher    "rofi -show drun"
+command editor      "gvim"
+command filemanager "urxvtc -e ranger"
+command browser     "firefox"
+command email       "urxvt -e mutt"
 
 bind-key 4-Return "urxvtc"
-bind-key 4-d "rofi -show drun"
-bind-key 4S-4 "scrot"
-bind-key 4-F12 "scrot"
+bind-key 4-d      "rofi -show drun"
+bind-key 4-F12    "scrot"
+bind-key 4S-4     "scrot -s"
 
 bind-mouse M-3 window-resize
 

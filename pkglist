@@ -18,6 +18,7 @@ go--
 htop--
 inkscape--
 keepassxc--
+mutt--sasl
 ncdu--
 nmap--
 portslist--
@@ -40,5 +41,6 @@ tree--
 unrar--
 unzip--iconv
 vim--gtk3-lua
+w3m--image
 xautolock--
 xclip--

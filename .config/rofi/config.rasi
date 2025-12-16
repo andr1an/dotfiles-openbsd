@@ -1,10 +1,10 @@
 * {
   font: "Fantasque Sans Mono Bold 22";
-  bg0: #2B3339;
-  bg1: #323D43;
-  fg0: #D3C6AA;
+  bg0: #2d353b;
+  bg1: #343f44;
+  fg0: #d3c6aa;
   accent-color: @bg1;
-  urgent-color: #DBBC7F;
+  urgent-color: #a7c080;
   background-color: transparent;
   text-color: @fg0;
 }
@@ -20,10 +20,10 @@ prompt {
   text-color: @accent-color;
 }
 textbox-prompt-colon {
-    expand:     false;
-    str:        ":";
-    margin:     0px 0.3em 0em 0em ;
-    text-color: #A7C080;
+  expand:     false;
+  str:        ":";
+  margin:     0px 0.3em 0em 0em ;
+  text-color: #7fbbb3;
 }
 textbox {
   background-color: @bg1;

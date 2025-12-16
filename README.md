@@ -2,6 +2,7 @@
 
 ![screenshot_01](.github/screenshots/01.webp)
 ![screenshot_02](.github/screenshots/02.webp)
+![screenshot_03](.github/screenshots/03.webp)
 
 Configuration is used on my workstation.
 

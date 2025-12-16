@@ -16,6 +16,7 @@ redshift -l 41.0:28.1 -t 6500:6000 &
 tint2 &
 urxvtd -q -f -o &
 feh --bg-fill ~/wallpaper.png &
+xautolock -time 5 -locker "xlock" &
 
 /usr/local/libexec/tray-app/sound &
 /usr/local/libexec/tray-app/eject &

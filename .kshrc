@@ -1,5 +1,7 @@
 # ~/.kshrc
 
+set -o emacs
+
 export CLICOLOR=1
 
 alias ls='colorls'

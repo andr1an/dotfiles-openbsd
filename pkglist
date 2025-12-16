@@ -1,4 +1,5 @@
 ImageMagick--
+ansible--
 bash--
 btop--
 colorls--
@@ -39,4 +40,5 @@ tree--
 unrar--
 unzip--iconv
 vim--gtk3-lua
+xautolock--
 xclip--

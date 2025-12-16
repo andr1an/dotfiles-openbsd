@@ -1,0 +1,44 @@
+- name: Comment out xconsole in xenodm Xsetup_0
+  hosts: localhost
+  connection: local
+  #become: true
+  #become_method: doas
+  tasks:
+    - name: Set up MacBook touckpad
+      ansible.builtin.copy:
+        dest: /etc/wsconsctl.conf
+        mode: 0644
+        owner: root
+        group: wheel
+        backup: true
+        content: |
+          mouse1.tp.mtbuttons=1
+          mouse1.reverse_scrolling=1
+
+    - name: Disable xconsole in /etc/X11/xenodm/Xsetup_0
+      ansible.builtin.replace:
+        path: /etc/X11/xenodm/Xsetup_0
+        regexp: '^(?!#)(\s*\$\{exec_prefix\}/bin/xconsole.*)$'
+        replace: '# \1'
+        backup: true
+
+    - name: Change WIDTH > 800 from if to elif
+      ansible.builtin.replace:
+        path: /etc/X11/xenodm/Xresources
+        regexp: '^#if\s+WIDTH\s*>\s*800\b'
+        replace: '#elif WIDTH > 800'
+        backup: true
+
+    - name: Add WIDTH > 2000 xlogin block before WIDTH > 800 block
+      ansible.builtin.blockinfile:
+        path: /etc/X11/xenodm/Xresources
+        marker: "! {mark} Added by Ansible"
+        insertbefore: '^#elif WIDTH > 800'
+        block: |
+          #if WIDTH > 2000
+          xlogin*greetFace:       DejaVu Sans Condensed-20:bold:italic:dpi=160
+          xlogin*face:            DejaVu Sans Condensed-14:dpi=160
+          xlogin*promptFace:      DejaVu Sans Condensed-14:bold:dpi=160
+          xlogin*failFace:        DejaVu Sans Condensed-14:bold:dpi=160
+          Xcursor.theme: Adwaita
+          Xcursor.size: 40

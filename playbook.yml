@@ -1,10 +1,11 @@
-- name: Comment out xconsole in xenodm Xsetup_0
+---
+- name: Set up OpenBSD MacBook
   hosts: localhost
   connection: local
-  #become: true
-  #become_method: doas
+  become: true
+  become_method: su
   tasks:
-    - name: Set up MacBook touckpad
+    - name: Set up trackpad
       ansible.builtin.copy:
         dest: /etc/wsconsctl.conf
         mode: 0644
@@ -42,3 +43,10 @@
           xlogin*failFace:        DejaVu Sans Condensed-14:bold:dpi=160
           Xcursor.theme: Adwaita
           Xcursor.size: 40
+
+    - name: Set up apmd
+      ansible.builtin.service:
+        name: apmd
+        arguments: "-A"
+        enabled: true
+        state: started

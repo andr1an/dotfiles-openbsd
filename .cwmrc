@@ -34,3 +34,10 @@ sticky yes
 
 snapdist 10
 moveamount 20
+
+color activeborder "#475258"
+color inactiveborder "#232a2e"
+color menubg "#3d484d"
+color menufg "#4f585e"
+color font "#d3c6aa"
+color selfont "#d3c6aa"

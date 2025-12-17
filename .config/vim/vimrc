@@ -17,3 +17,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 au BufRead,BufNewFile ~/.ssh/config.d/* set ft=sshconfig
 au BufRead,BufNewFile *.py set ts=4 sw=4 et sta si
+
+packadd! everforest
+
+colorscheme everforest
+set background=dark

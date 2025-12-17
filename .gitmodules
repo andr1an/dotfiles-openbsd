@@ -1,0 +1,3 @@
+[submodule "/home/andrian/.config/vim/pack/colors/opt/everforest"]
+	path = /home/andrian/.config/vim/pack/colors/opt/everforest
+	url = git@github.com:sainnhe/everforest.git

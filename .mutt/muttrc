@@ -1,0 +1,20 @@
+# ~/.mutt/muttrc
+# vim: ft=muttrc
+
+# General
+set certificate_file = "~/.mutt/certificates"
+set header_cache     = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set editor           = "vim"
+
+# HTML
+set mailcap_path = "~/.mutt/mailcap"
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+# Locales
+set charset="koi8-r"
+set send_charset="us-ascii:iso-8859-1:koi8-r:utf-8"
+
+# Load accounts
+source ~/.mutt/accounts.muttrc

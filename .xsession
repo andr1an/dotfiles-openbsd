@@ -5,7 +5,8 @@ export LC_ALL=en_US.UTF-8
 export EDITOR=vim
 export VISUAL=vim
 
-#export GDK_SCALE=2.0
+export GDK_SCALE=2.0
+export GDK_DPI_SCALE=0.5
 #export QT_SCALE_FACTOR=2.0
 
 export ENV=$HOME/.kshrc

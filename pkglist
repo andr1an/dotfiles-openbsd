@@ -13,11 +13,13 @@ ffmpeg--
 firefox--
 gimp--%snapshot
 git--
+gnome-themes-extra--
 gnupg--
 go--
 htop--
 inkscape--
 keepassxc--
+lxappearance--
 mutt--sasl
 ncdu--
 nmap--

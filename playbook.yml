@@ -37,10 +37,10 @@
         insertbefore: '^#elif WIDTH > 800'
         block: |
           #if WIDTH > 2000
-          xlogin*greetFace:       DejaVu Sans Condensed-20:bold:italic:dpi=160
-          xlogin*face:            DejaVu Sans Condensed-14:dpi=160
-          xlogin*promptFace:      DejaVu Sans Condensed-14:bold:dpi=160
-          xlogin*failFace:        DejaVu Sans Condensed-14:bold:dpi=160
+          xlogin*greetFace:       Clear Sans-20:bold:italic:dpi=160
+          xlogin*face:            Clear Sans-14:dpi=160
+          xlogin*promptFace:      Clear Sans-14:bold:dpi=160
+          xlogin*failFace:        Clear Sans-14:bold:dpi=160
           Xcursor.theme: Adwaita
           Xcursor.size: 40
 

@@ -1,6 +1,6 @@
 # ~/.cwmrc
 
-fontname "sans-serif:pixelsize=22:bold"
+fontname "clearsans:pixelsize=24"
 
 command terminal    "urxvtc"
 command launcher    "rofi -show drun"

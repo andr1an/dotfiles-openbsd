@@ -1,0 +1,39 @@
+#!/bin/sh
+# vim: ts=2:sw=2:et:sta:si
+
+set -e
+
+
+confirm() {
+  local _reply
+  _reply="$(echo "yes\nno" | rofi -dmenu -p "Are you sure you want to $1?")"
+  if [[ "x$_reply" = "xyes" ]]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+
+options="\
+shutdown
+reboot
+logout
+lock"
+
+action="$(echo "$options" | rofi -dmenu -p "Stop working and...")"
+
+case "$action" in
+  shutdown)
+    confirm shutdown && doas halt -p || exit
+    ;;
+  reboot)
+    confirm reboot && doas reboot || exit
+    ;;
+  logout)
+    confirm logout && pkill cwm || exit
+    ;;
+  lock)
+    xlock
+    ;;
+esac

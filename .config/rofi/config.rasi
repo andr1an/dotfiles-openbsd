@@ -17,7 +17,7 @@ inputbar {
   padding: 0.5em;
 }
 prompt {
-  text-color: @accent-color;
+  text-color: @urgent-color;
 }
 textbox-prompt-colon {
   expand:     false;

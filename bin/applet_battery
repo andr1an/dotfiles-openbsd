@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# Font Awesome glyphs (UTF-8)
+BAT_FULL='\xEF\x89\x80'   # 
+BAT_75='\xEF\x89\x81'     # 
+BAT_50='\xEF\x89\x82'     # 
+BAT_25='\xEF\x89\x83'     # 
+BAT_EMPTY='\xEF\x89\x84'  # 
+PLUG='\xEF\x87\xA6'       # 
+BOLT='\xEF\x83\xA7'       # 
+
+while :; do
+  PERCENT=$(apm -l 2>/dev/null)
+  AC=$(apm -a 2>/dev/null)      # 1 = AC, 0 = battery
+  STATE=$(apm -b 2>/dev/null)   # 3 = charging
+
+  if [ "$PERCENT" -ge 75 ]; then
+    BAT="$BAT_FULL"
+  elif [ "$PERCENT" -ge 50 ]; then
+    BAT="$BAT_75"
+  elif [ "$PERCENT" -ge 25 ]; then
+    BAT="$BAT_50"
+  elif [ "$PERCENT" -ge 10 ]; then
+    BAT="$BAT_25"
+  else
+    BAT="$BAT_EMPTY"
+  fi
+
+  if [ "$STATE" -eq 3 ]; then
+    printf "%b %b\n" "$BAT" "$BOLT"
+  elif [ "$AC" -eq 1 ]; then
+    printf "%b %b\n" "$BAT" "$PLUG"
+  else
+    printf "%b\n" "$BAT"
+  fi
+
+  sleep 3
+done

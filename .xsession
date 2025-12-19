@@ -26,7 +26,4 @@ urxvtd -q -f -o &
 feh --bg-fill ~/wallpaper.png &
 xautolock -time 5 -locker "xlock" &
 
-/usr/local/libexec/tray-app/sound &
-/usr/local/libexec/tray-app/eject &
-
 exec cwm

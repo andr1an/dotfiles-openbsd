@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Font Awesome glyphs (UTF-8)
+VOL_MUTE='\xEF\x9A\xA9'   #   volume-mute
+VOL_LOW='\xEF\x80\xA6'    #   volume-off
+VOL_MID='\xEF\x80\xA7'    #   volume-down
+VOL_HIGH='\xEF\x80\xA8'   #   volume-up
+
+while :; do
+  LEVEL=$(sndioctl -n output.level 2>/dev/null)
+  MUTE=$(sndioctl -n output.mute 2>/dev/null)
+  PERCENT=$(printf "%.0f" "$(echo "$LEVEL * 100" | bc -l)")
+
+  if [ "$MUTE" -eq 1 ] || [ "$PERCENT" -eq 0 ]; then
+    ICON="$VOL_MUTE"
+  elif [ "$PERCENT" -lt 30 ]; then
+    ICON="$VOL_LOW"
+  elif [ "$PERCENT" -lt 70 ]; then
+    ICON="$VOL_MID"
+  else
+    ICON="$VOL_HIGH"
+  fi
+
+  printf "%b\n" "$ICON"
+  sleep 1
+done

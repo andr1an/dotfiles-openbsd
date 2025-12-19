@@ -7,6 +7,10 @@ VOL_MID='\xEF\x80\xA7'    #   volume-down
 VOL_HIGH='\xEF\x80\xA8'   #   volume-up
 
 while :; do
+  # Output for tooltip to stderr
+  printf '\033[2J' >&2
+  sndioctl >&2
+
   LEVEL=$(sndioctl -n output.level 2>/dev/null)
   MUTE=$(sndioctl -n output.mute 2>/dev/null)
   PERCENT=$(printf "%.0f" "$(echo "$LEVEL * 100" | bc -l)")

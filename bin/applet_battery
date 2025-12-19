@@ -10,6 +10,10 @@ PLUG='\xEF\x87\xA6'       # 
 BOLT='\xEF\x83\xA7'       # 
 
 while :; do
+  # Output for tooltip to stderr
+  printf '\033[2J' >&2
+  apm >&2
+
   PERCENT=$(apm -l 2>/dev/null)
   AC=$(apm -a 2>/dev/null)      # 1 = AC, 0 = battery
   STATE=$(apm -b 2>/dev/null)   # 3 = charging

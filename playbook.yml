@@ -16,6 +16,13 @@
           mouse1.tp.mtbuttons=1
           mouse1.reverse_scrolling=1
 
+    - name: Disable ssh-add in /etc/X11/xenodm/Xsession
+      ansible.builtin.replace:
+        path: /etc/X11/xenodm/Xsession
+        regexp: '^(?!#)(\s*ssh-add < /dev/null)$'
+        replace: '# \1'
+        backup: true
+
     - name: Disable xconsole in /etc/X11/xenodm/Xsetup_0
       ansible.builtin.replace:
         path: /etc/X11/xenodm/Xsetup_0

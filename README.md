@@ -13,5 +13,6 @@ Configuration is used on my workstation.
 * **Shell:** ksh
 * **WM:** CWM
 * **Panel:** tint2
+* **Launcher:** rofi
 * **File manager:** ranger
 * **Color scheme:** Everforest

@@ -12,6 +12,9 @@ export HISTFILE=~/.ksh_history
 export HISTSIZE=10000
 export HISTCONTROL=ignorespace:ignoredups
 
+export PAGER="less -R"
+export LESS="-i"
+
 alias ll='ls -l'
 alias la='ls -lA'
 

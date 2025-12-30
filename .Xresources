@@ -8,6 +8,9 @@ Xft.hitstyle: hintslight
 Xft.lcdfilter: lcddefault
 Xft.autohint: false
 
+! Common font
+*font: *-spleen-medium-r-*-*-32-*
+
 ! Cursor
 
 Xcursor.size: 40
@@ -68,9 +71,10 @@ URxvt.scrollBar_right: true
 
 URxvt.font: xft:FantasqueSansM Nerd Font Mono:size=12
 
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: xdg-open
-URxvt.matcher.button: 1
+URxvt.perl-ext-common: 
+!URxvt.perl-ext-common: default,matcher
+!URxvt.url-launcher: xdg-open
+!URxvt.matcher.button: 1
 
 URxvt.keysym.Control-Up: \033[1;5A
 URxvt.keysym.Control-Down: \033[1;5B
@@ -86,8 +90,8 @@ URxvt.scrollTtyKeypress: true
 
 ! ssh-askpass settings
 
-SshAskpass*Button.font: -*-dejavu sans-medium-r-*-*-22-*-*-*-*-*-*-*
-SshAskpass*Dialog.font: -*-dejavu sans-medium-r-*-*-24-*-*-*-*-*-*-*
+SshAskpass*Button.font: -*-spleen-medium-r-*-*-32-*-*-*-*-*-*-*
+SshAskpass*Dialog.font: -*-spleen-medium-r-*-*-32-*-*-*-*-*-*-*
 SshAskpass*Indicator.width: 40
 SshAskpass*Indicator.height: 20
 SshAskpass*defaultXResolution: 200/in

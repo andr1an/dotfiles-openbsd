@@ -18,6 +18,9 @@ export MOZ_WEBRENDER=1
 
 export ENV=$HOME/.kshrc
 
+xset fp+ "/usr/local/share/fonts/spleen"
+xset fp rehash
+
 xrdb -merge $HOME/.Xresources
 
 redshift -l 41.0:28.1 -t 6400:5900 &

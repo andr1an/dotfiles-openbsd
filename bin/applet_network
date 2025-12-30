@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# icons (Font Awesome, UTF-8)
+ICON_UP='\xEF\x87\xAB'     #   wifi
+ICON_WIRED='\xEF\x9B\xBF'  #   ethernet
+ICON_DOWN='\xEF\x81\x9E'   #   offline
+
+while :; do
+  # get default interface
+  IFACE=$(route -n get default 2>/dev/null | awk '/interface:/{print $2}')
+
+  if [ -z "$IFACE" ]; then
+    printf "%b down\n" "$ICON_DOWN"
+    sleep 3
+    continue
+  fi
+
+  IP=$(ifconfig "$IFACE" 2>/dev/null | awk '/inet /{print $2}')
+
+  if [ -z "$IP" ]; then
+    printf "%b %s\n" "$ICON_DOWN"
+    sleep 3
+    continue
+  fi
+
+  # detect Wi-Fi vs wired
+  if ifconfig "$IFACE" 2>/dev/null | grep -q "media:.*802.11"; then
+    # Wi-Fi
+    SSID=$(ifconfig "$IFACE" 2>/dev/null | awk -F'(nwid|join) ' '/(nwid|join) /{print $2}' | cut -d' ' -f1)
+    if [ -n "$SSID" ]; then
+      printf "%b\n" "$ICON_UP"
+      printf '\033[2J' >&2
+      printf "%s %s\n" "$SSID" "$IP" >&2
+      sleep 3
+      continue
+    fi
+    printf "%b\n" "$ICON_UP" "$IFACE" "$IP"
+    printf '\033[2J' >&2
+    printf "%s %s\n" "$IFACE" "$IP" >&2
+  else
+    # Wired
+    printf "%b %s %s\n" "$ICON_WIRED" "$IFACE" "$IP"
+    printf '\033[2J' >&2
+    printf "%s %s\n" "$IFACE" "$IP" >&2
+  fi
+  sleep 3
+done

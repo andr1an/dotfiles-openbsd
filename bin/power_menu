@@ -7,7 +7,7 @@ set -e
 confirm() {
   local _reply
   _reply="$(echo "yes\nno" | rofi -dmenu -p "Are you sure you want to $1?")"
-  if [[ "x$_reply" = "xyes" ]]; then
+  if [ "x$_reply" = "xyes" ]; then
     return 0
   else
     return 1

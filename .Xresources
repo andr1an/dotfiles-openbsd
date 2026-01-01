@@ -71,10 +71,9 @@ URxvt.scrollBar_right: true
 
 URxvt.font: xft:FantasqueSansM Nerd Font Mono:size=12
 
-URxvt.perl-ext-common: 
-!URxvt.perl-ext-common: default,matcher
-!URxvt.url-launcher: xdg-open
-!URxvt.matcher.button: 1
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: xdg-open
+URxvt.matcher.button: 1
 
 URxvt.keysym.Control-Up: \033[1;5A
 URxvt.keysym.Control-Down: \033[1;5B
